@@ -54,5 +54,9 @@ users:
 admins: 
 - view all characters in a campaign
 
+mangos:
+- Special Gamer Mode
+
+
 
 
