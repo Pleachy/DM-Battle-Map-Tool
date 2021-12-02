@@ -10,6 +10,7 @@ const buildTables = async () => {
         await client.query(`
         DROP TABLE IF EXISTS users
         `)
+        console.log('Tables dropped successfully');
 
 
 
@@ -26,12 +27,9 @@ const buildTables = async () => {
             phoneNumber INT UNIQUE
         );
 
-        CREATE TABLE characters
-        )
-
-
-        
         `)
+        console.log('Tables Created Successfully');
+
 
     } catch (error) {
         throw (error);
