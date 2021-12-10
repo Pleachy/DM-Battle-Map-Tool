@@ -58,5 +58,18 @@ mangos:
 - Special Gamer Mode
 
 
+OVERALL FUNCTIONALITY
+
+user:
+- create campaigns and maps
+- see a list of public campaigns
+- request dm to add them to a campaign
+- create characters
+- message other users/ add them as friends
+- can assign users and maps to campaigns
+- can list campaigns as public or private
+- should be able to invite users to a campaign by email or username (maybe phone number)
+
+
 
 
