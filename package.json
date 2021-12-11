@@ -20,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/Pleachy/DM-Battle-Map-Tool/issues"
   },
-  "homepage": "https://github.com/Pleachy/DM-Battle-Map-Tool#readme",
   "dependencies": {
     "axios": "^0.24.0",
     "bcrypt": "^5.0.1",
