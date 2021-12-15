@@ -1,5 +1,8 @@
 const {client} = require('./client');
 
+const {
+    createChar
+} = require('.');
 
 const buildTables = async () => {
     try {
@@ -82,7 +85,36 @@ const buildTables = async () => {
 
 
 const populateInitialData = async() => {
+    try {
+        console.log('Creating data...');
 
+        //CREATE CHARACTERS
+        console.log('Creating characters...');
+        const charsToCreate = [
+            {
+                userId: 1,
+                name: 'Gertrude the Barbaric',
+                ac: 12,
+                cmb: 8,
+                cmd: 14,
+                ffac: 23,
+                tac: 6,
+                fortSave: 20,
+                reflexSave: 3,
+                willSave: 10,
+                initiative: 99,
+                isPublic: true
+            }
+        ];
+
+        const characters = await Promise.all(charsToCreate.map(createChar));
+        console.log('Characters created:');
+        console.log(characters);
+        console.log('Finished creating characters!');
+
+    } catch (error) {
+        console.error(error);
+    };
 }
 
 buildTables()
