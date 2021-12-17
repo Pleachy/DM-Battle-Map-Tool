@@ -36,7 +36,7 @@ router.use(async (req, res, next) => {
 });
 
 const charactersRouter = require('./characters')
-apiRouter.use('/characters', charactersRouter);
+router.use('/characters', charactersRouter);
 
 router.use((error, req, res, next) => {
     console.error(error)
