@@ -5,15 +5,13 @@ const server = express();
 const morgan = require("morgan");
 const path = require('path');
 const { PORT = 5000 } = process.env;
-const { client } = require('./db');
+const { client } = require('./db/client');
 
 server.use(express.json());
 server.use(morgan("dev"));
 server.use(express.static(path.join(__dirname, 'build')));
 
 server.use('/api', require('./routes'));
-
-
 
 server.use((req, res, next) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'))

@@ -88,6 +88,14 @@ const populateInitialData = async() => {
     try {
         console.log('Creating data...');
 
+        const {rows: [user]} = await client.query(`
+            INSERT INTO users (username, password, email, "profileImage", "phoneNumber")
+            VALUES ($1, $2, $3, $4, $5)
+            RETURNING *;
+        `,["citrus", "Belinda69", "someone@something.com", "blah.jpg", 1234567890])
+        console.log(user)
+
+
         //CREATE CHARACTERS
         console.log('Creating characters...');
         const charsToCreate = [
